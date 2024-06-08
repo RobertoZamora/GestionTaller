@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="330.0" prefWidth="169.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.Configuracion_CON">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <JFXButton fx:id="btnAddMarca" buttonType="RAISED" minHeight="100.0" minWidth="150.0" onMouseClicked="#addMarca" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;" text="Añadir Marca">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAddModelo" buttonType="RAISED" minHeight="100.0" minWidth="150.0" onMouseClicked="#addModelo" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;" text="Añadir Modelo">
+                     <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <JFXButton fx:id="btnGenerarBackUp" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" minHeight="100.0" minWidth="150.0" onMouseClicked="#generarBackUp" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/backup.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCargarBackUp" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" minHeight="100.0" minWidth="150.0" onMouseClicked="#cargarBackUp" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/upRespaldo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <JFXButton fx:id="btnParametros" buttonType="RAISED" minHeight="100.0" minWidth="150.0" onMouseClicked="#parametros" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;" text="Parametros">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.Documentos_CON">
+   <top>
+      <HBox alignment="CENTER" prefHeight="87.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnPrimero" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="183.0" layoutY="44.0" onMouseClicked="#primero" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/primero.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAnterior" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="452.0" layoutY="15.0" onMouseClicked="#anterior" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/anterior.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnSiguiente" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="413.0" layoutY="15.0" onMouseClicked="#siguiente" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/siguiente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnUltimo" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="375.0" layoutY="15.0" onMouseClicked="#ultimo" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ultimo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnAddDocumento" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="457.0" layoutY="15.0" onMouseClicked="#addDocumento" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgAddDoc" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/facturaPlus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnEditarDocumento" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="534.0" layoutY="15.0" onMouseClicked="#editDocumento" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgEditDoc" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/facturaEdit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnBorrarDocumento" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="495.0" layoutY="15.0" onMouseClicked="#borrarDocumento" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgDelDoc" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/facturaErase.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnBuscarDocumento" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="572.0" layoutY="15.0" onMouseClicked="#buscarDocumento" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgFindDoc" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/facturaSearch.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="pdf" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="649.0" layoutY="15.0" onMouseClicked="#pdf" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/PDF.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="87.0" prefWidth="200.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <JFXButton fx:id="btnAceptar" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#aceptar" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/aceptar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnCancelar" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="15.0" onMouseClicked="#cancelar" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="SERIE" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="serie" alignment="CENTER" editable="false" focusColor="#405aa800" unFocusColor="#4d4d4d00" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="DOCUMENTO" />
+                        <HBox alignment="CENTER" prefHeight="29.0" prefWidth="136.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <JFXTextField fx:id="idDocumento" alignment="CENTER" editable="false" focusColor="#405aa800" unFocusColor="#4d4d4d00" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="notaImportante" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/verde.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="FECHA" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXDatePicker fx:id="fecha" defaultColor="#3daeff" editable="false" maxWidth="100.0" onAction="#cambiarFecha" style="-fx-alignment: center;" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="MATRICULA" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btnBuscarVehiculo" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#buscarVehiculo" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/lupa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <ripplerFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="#daf0ff" />
+                                          <Stop color="#3daeff" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXTextField fx:id="matricula" alignment="CENTER" editable="false" focusColor="#405aa800" unFocusColor="#4d4d4d00" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="210.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="KM" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="kilometros" alignment="CENTER" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="VEHICULO" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="marcaModelo" alignment="CENTER" editable="false" focusColor="#405aa800" minWidth="150.0" style="-fx-text-inner-color: red;" unFocusColor="#4d4d4d00" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <Label text="CLIENTE" />
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="btnBuscarCliente" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#buscarCliente" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/lupa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <ripplerFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="#daf0ff" />
+                                          <Stop color="#3daeff" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXTextField fx:id="cliente" alignment="CENTER" editable="false" focusColor="#a8404000" unFocusColor="#4d4d4d00" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXCheckBox fx:id="mosKmTotalPres" checkedColor="#3daeff" text="Mostrar KM Factura" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btnGenerarFacturaPresupuesto" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#generarFactPres" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#daf0ff" />
+                                    <Stop color="#3daeff" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/presupuestoMin.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="labelImpuesto" text="Impuesto">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="impuesto" alignment="CENTER" prefWidth="100.0">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="formaDePago">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton fx:id="btnProdGen" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#prodGen" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#daf0ff" />
+                                    <Stop color="#3daeff" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/generico.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnAddFila" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#addFila" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#daf0ff" />
+                                    <Stop color="#3daeff" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/agnadir.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnBorrarFila" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarFila" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                           <ripplerFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#daf0ff" />
+                                    <Stop color="#3daeff" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </ripplerFill>
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/borrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="hboxTable" alignment="CENTER" prefHeight="298.0" prefWidth="950.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="textTotal" alignment="CENTER_RIGHT" editable="false" focusColor="#405aa800" style="-fx-background-color: cyan; -fx-border-color: black;" unFocusColor="#4d4d4d00" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

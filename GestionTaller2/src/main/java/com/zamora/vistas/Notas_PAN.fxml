@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<BorderPane prefHeight="439.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.Notas_CON">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXTextArea fx:id="areaTextoNota" focusColor="#405aa800" style="-fx-background-color: #fcce03; -fx-control-inner-background: #fcce03; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #eba834;" unFocusColor="#4d4d4d00" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </padding>
+                  </JFXTextArea>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: CYAN;">
+               <children>
+                  <JFXButton fx:id="btnAddNota" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#addNota" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/addNota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEditNota" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#editNota" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/editNota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="btnBorrarNota" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarNota" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/delNota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAceptar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#aceptar" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/aceptar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCancelar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cancelar" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/cancel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXListView fx:id="listNotas" onMouseClicked="#seleccionarNota" prefHeight="334.0" prefWidth="190.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXListView>
+                  <HBox alignment="CENTER" prefHeight="90.0" prefWidth="200.0">
+                     <children>
+                        <JFXCheckBox fx:id="chkImportante" checkedColor="#3daeff" text="Importante">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="chkPrincipal" checkedColor="#3daeff" text="Principal">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>

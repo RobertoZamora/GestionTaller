@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="392.0" prefWidth="739.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.zamora.controller.BusquedaDocumentos_CON">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <JFXListView fx:id="listaDocumentos" onMouseClicked="#doubleClick" prefHeight="382.0" prefWidth="273.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+   <right>
+      <VBox prefHeight="392.0" prefWidth="404.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXComboBox fx:id="tipoBusqueda" prefHeight="25.0" prefWidth="394.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXTextField fx:id="busqueda" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton fx:id="buscar" alignment="CENTER" buttonType="RAISED" onMouseClicked="#buscar" prefHeight="41.0" prefWidth="321.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 10; -fx-background-radius: 10;" text="BUSCAR">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="reset" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#reset" prefHeight="41.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton fx:id="aceptar" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#aceptar" prefHeight="88.0" prefWidth="88.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/aceptar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

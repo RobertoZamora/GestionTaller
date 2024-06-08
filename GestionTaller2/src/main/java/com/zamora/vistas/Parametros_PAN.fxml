@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="600.0" minWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.Parametros_CON">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="419.0" text="Validaciones matriculas">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="matriculas" focusColor="#405aa800" style="-fx-border-color: #53c1fc; -fx-border-radius: 5; -fx-background-radius: 5;" unFocusColor="#4d4d4d00">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="420.0" text="Texto al pie de la factura">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="pieFactura" focusColor="#405aa800" layoutX="10.0" layoutY="78.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 5; -fx-background-radius: 5;" unFocusColor="#4d4d4d00">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="426.0" text="Texto al pie del presupuesto">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="piePresupuesto" focusColor="#405aa800" layoutX="10.0" layoutY="78.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 5; -fx-background-radius: 5;" unFocusColor="#4d4d4d00">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <Label layoutX="10.0" layoutY="27.0" text="Servidores de fecha">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="servidoresFecha" focusColor="#405aa800" layoutX="10.0" layoutY="253.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 5; -fx-background-radius: 5;" unFocusColor="#4d4d4d00">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <Label layoutX="10.0" layoutY="367.0" text="Formas de Pago:">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="formasPago" focusColor="#405aa800" layoutX="10.0" layoutY="397.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 5; -fx-background-radius: 5;" unFocusColor="#4d4d4d00" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="btnPass" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" minHeight="100.0" minWidth="100.0" onMouseClicked="#pass" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/pass.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                  <JFXButton fx:id="btnGuardar" alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" minHeight="100.0" minWidth="100.0" onMouseClicked="#guardar" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#daf0ff" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/guardar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

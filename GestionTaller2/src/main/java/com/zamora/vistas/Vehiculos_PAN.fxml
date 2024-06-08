@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.Vehiculos_CON">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="botonAddVehiculo" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#addVehiculo" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgAddVehiculo" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/addvehiculo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="botonEditVehiculo" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#editarVehiculo" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgEditVehiculo" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/vehiculoEdit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="botonBorrarVehiculo" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarVehiculo" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgBorrarVehiculo" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/vehiculoErase.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="botonAlbaranes" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#abrirAlbaranes" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgAlbaran" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/albaran.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="botonCambiarCliente" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cambiarCliente" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/clienteChange.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="botonAceptar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#aceptar" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgAceptar" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/aceptar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="botonCancelar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cancelar" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 15; -fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#daf0ff" offset="0.007662835249042145" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+               <graphic>
+                  <ImageView fx:id="imgCancelar" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="150.0" text="Matricula" />
+                  <JFXTextField fx:id="textMatricula" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="150.0" text="Marca:" />
+                  <JFXComboBox fx:id="comboMarca" onAction="#cambiarMarca" prefWidth="340.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="150.0" text="Modelo:" />
+                  <JFXComboBox fx:id="comboModelo" prefWidth="340.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="150.0" text="Combustible:" />
+                  <JFXComboBox fx:id="comboCombustible" prefWidth="340.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefWidth="150.0" text="Bastidor:" />
+                  <JFXTextField fx:id="textBastidor" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="botonFichaTecnica" buttonType="RAISED" onMouseClicked="#buscarFichaTecnica" prefWidth="150.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 5; -fx-background-radius: 5;" text="Ficha Tecnica">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXTextField fx:id="textFichaTecnica" editable="false" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton fx:id="botonVerFichaTecnica" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#verFichaTecnica" prefHeight="30.0" prefWidth="30.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/view.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="botonBorrarFichaTecnica" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarFichaTecnica" prefHeight="30.0" prefWidth="30.0" style="-fx-border-color: #d7d7db; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#daf0ff" offset="0.007662835249042145" />
+                              <Stop color="#3daeff" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/borrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </center>
+   <left>
+      <JFXListView fx:id="listaVehiculos" onMouseClicked="#cambiarDatos" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" top="5.0" />
+         </BorderPane.margin>
+      </JFXListView>
+   </left>
+</BorderPane>

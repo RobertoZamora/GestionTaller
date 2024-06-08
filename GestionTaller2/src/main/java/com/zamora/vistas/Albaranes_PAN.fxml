@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<BorderPane prefHeight="615.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.Albaranes_CON">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="botonAddAlbaran" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#addAlbaran" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/albaranPlus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="botonBorrarAlbaran" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarAlbaran" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/albaranErase.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="botonImprimirAlbaran" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#imprimirAlbaran" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/print.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="botonAjustarImagen" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#ajustarImagen" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/zoomOff.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="botonGirarIzquierda" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#girarIzquierda" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/girarIzquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="botonGirarDerecha" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#girarDerecha" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/girarDerecha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#daf0ff" />
+                        <Stop color="#3daeff" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children></HBox>
+   </bottom>
+   <left>
+      <ListView fx:id="listaAlbaranes" onMouseClicked="#seleccionarAlbaran" prefHeight="505.0" prefWidth="321.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="2.5" top="5.0" />
+         </BorderPane.margin></ListView>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="423.0" prefWidth="720.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="scrollPanel" prefHeight="414.0" prefWidth="586.0">
+                    <content>
+                      <AnchorPane prefHeight="412.0" prefWidth="581.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="411.0" prefWidth="581.0">
+                                 <children>
+                                    <Canvas fx:id="imgCanvas" height="200.0" width="200.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXSlider fx:id="scrollZoom" blockIncrement="1.0" indicatorPosition="RIGHT" majorTickUnit="1.0" max="2.0" min="1.0E-18" minorTickCount="1" prefHeight="14.0" prefWidth="683.0" value="1.0" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="2.5" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="102.0" prefWidth="201.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zamora.controller.TipoDocumento_CON">
+   <center>
+      <HBox alignment="CENTER" prefHeight="121.0" prefWidth="234.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnFacturas" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#facturas" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/factura.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Facturas" />
+               </tooltip>
+            </JFXButton>
+            <JFXButton fx:id="btnPresupuestos" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#presupuestos" prefHeight="77.0" prefWidth="77.0" style="-fx-border-color: #53c1fc; -fx-border-radius: 20%; -fx-background-radius: 20%;">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="2.5" right="2.5" top="5.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/presupuesto.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Presupuestos" />
+               </tooltip>
+            </JFXButton>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

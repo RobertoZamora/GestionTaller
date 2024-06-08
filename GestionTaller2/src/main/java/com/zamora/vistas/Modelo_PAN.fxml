@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="161.0" prefWidth="268.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.zamora.controller.Modelo_CON">
+   <center>
+      <VBox prefHeight="427.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="359.0" text="Marca" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="listaMarca" prefHeight="25.0" prefWidth="304.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="15.0" right="15.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="291.0" text="Modelo" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="15.0" right="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="nombreModelo" alignment="CENTER" onKeyPressed="#dobleClick" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="15.0" right="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
