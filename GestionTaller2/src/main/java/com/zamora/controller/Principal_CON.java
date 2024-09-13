@@ -87,7 +87,7 @@ public class Principal_CON
 	public void abrirClientes(MouseEvent event)
     {
 		try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zamora/vistas/Clientes_PAN.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/Clientes_PAN.fxml"));
                         
             loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Clientes_CON.class) {
@@ -104,7 +104,7 @@ public class Principal_CON
             clientes.setTitle("Clientes");
             clientes.setScene(new Scene(root, 967, 540));
             
-            Image icon = new Image(getClass().getResourceAsStream("/com/zamora/img/cliente.png"));
+            Image icon = new Image(getClass().getResourceAsStream("/img/cliente.png"));
             clientes.getIcons().add(icon);
             
 			// Configura la ventana secundaria como modal
@@ -139,7 +139,7 @@ public class Principal_CON
 			
 			if(emrpesa != null)
 			{
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zamora/vistas/Documentos_PAN.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/Documentos_PAN.fxml"));
                 
 	            loader.setControllerFactory(controllerClass -> {
 	                if (controllerClass == Documentos_CON.class) {
@@ -156,7 +156,7 @@ public class Principal_CON
 	            presupuesto.setTitle("Presupuestos");
 	            presupuesto.setScene(new Scene(root, 967, 540));
 	            
-	            Image icon = new Image(getClass().getResourceAsStream("/com/zamora/img/presupuesto.png"));
+	            Image icon = new Image(getClass().getResourceAsStream("/img/presupuesto.png"));
 	            presupuesto.getIcons().add(icon);
 	            
 				// Configura la ventana secundaria como modal
@@ -198,7 +198,7 @@ public class Principal_CON
 			
 			if(emrpesa != null)
 			{
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zamora/vistas/Documentos_PAN.fxml"));
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/Documentos_PAN.fxml"));
                 
 	            loader.setControllerFactory(controllerClass -> {
 	                if (controllerClass == Documentos_CON.class) {
@@ -215,7 +215,7 @@ public class Principal_CON
 	            facturas.setTitle("Facturas");
 	            facturas.setScene(new Scene(root, 967, 540));
 	            
-	            Image icon = new Image(getClass().getResourceAsStream("/com/zamora/img/factura.png"));
+	            Image icon = new Image(getClass().getResourceAsStream("/img/factura.png"));
 	            facturas.getIcons().add(icon);
 	            
 				// Configura la ventana secundaria como modal
@@ -251,7 +251,7 @@ public class Principal_CON
 	public void abrirEmpresas(MouseEvent event)
 	{
 		try {
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Empresa_PAN.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Empresa_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Empresa_CON.class) {
@@ -267,7 +267,7 @@ public class Principal_CON
 			Stage Empresas = new Stage();
 			Empresas.setTitle("Empresa");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			Empresas.getIcons().add(icon);
 			
 			Empresas.setScene(new Scene(root, 382, 483));
@@ -296,7 +296,7 @@ public class Principal_CON
 	public void abrirConfiguracion(MouseEvent event)
 	{
 		try {
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Configuracion_PAN.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Configuracion_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Configuracion_CON.class) {
@@ -312,7 +312,7 @@ public class Principal_CON
 			Stage configuracion = new Stage();
 			configuracion.setTitle("Configuracion");
 
-			Image icon = new Image(Main.class.getResource("img/engranage.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/engranage.png").toExternalForm());
 			configuracion.getIcons().add(icon);
 			
 			configuracion.setScene(new Scene(root));

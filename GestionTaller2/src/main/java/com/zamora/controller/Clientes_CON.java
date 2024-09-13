@@ -341,7 +341,7 @@ public class Clientes_CON
     void acccionBorrarCliente(MouseEvent event)
     {		
 		try {
-			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
 	            if (controllerClass == Password_CON.class) {
@@ -357,7 +357,7 @@ public class Clientes_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Contraseña");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -470,7 +470,7 @@ public class Clientes_CON
     void accionBuscarCliente(MouseEvent event)
     {
     	try {
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/BusquedaClientes_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/BusquedaClientes_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == BusquedaClientes_CON.class) {
@@ -486,7 +486,7 @@ public class Clientes_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Buscar Cliente");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -1108,7 +1108,7 @@ public class Clientes_CON
     			
     			Parent root;
 				try {
-        			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Seleccion_PAN.fxml"));
+        			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Seleccion_PAN.fxml"));
         			
         			loader.setControllerFactory(controllerClass -> {
                         if (controllerClass == Seleccion_CON.class) {
@@ -1124,7 +1124,7 @@ public class Clientes_CON
         			Stage seleccionable = new Stage();
         			seleccionable.setTitle("Selecciona...");
 
-        			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+        			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
         			seleccionable.getIcons().add(icon);
 
 //        			seleccionable.setScene(new Scene(root, 300, 400));
@@ -1188,7 +1188,7 @@ public class Clientes_CON
     			
     			Parent root;
 				try {
-        			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Seleccion_PAN.fxml"));
+        			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Seleccion_PAN.fxml"));
         			
         			loader.setControllerFactory(controllerClass -> {
                         if (controllerClass == Seleccion_CON.class) {
@@ -1204,7 +1204,7 @@ public class Clientes_CON
         			Stage seleccionable = new Stage();
         			seleccionable.setTitle("Selecciona...");
 
-        			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+        			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
         			seleccionable.getIcons().add(icon);
         			
 //        			seleccionable.setScene(new Scene(root, 300, 400));
@@ -1256,7 +1256,7 @@ public class Clientes_CON
     void accionNotas(MouseEvent event)
     {
     	try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zamora/vistas/Notas_PAN.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/Notas_PAN.fxml"));
             
             loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Notas_CON.class) {
@@ -1273,7 +1273,7 @@ public class Clientes_CON
             ventanaStage.setTitle("Notas");
             ventanaStage.setScene(new Scene(root, 841, 439));
             
-            Image icon = new Image(getClass().getResourceAsStream("/com/zamora/img/POSTIT.png"));
+            Image icon = new Image(getClass().getResourceAsStream("/img/POSTIT.png"));
             ventanaStage.getIcons().add(icon);
             
 			// Configura la ventana secundaria como modal
@@ -1298,7 +1298,7 @@ public class Clientes_CON
     void accionVehiculos(MouseEvent event)
     {
     	try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/zamora/vistas/Vehiculos_PAN.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vistas/Vehiculos_PAN.fxml"));
             
             loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Vehiculos_CON.class) {
@@ -1315,7 +1315,7 @@ public class Clientes_CON
             ventanaStage.setTitle("Vehiculos");
             ventanaStage.setScene(new Scene(root, 700, 500));
             
-            Image icon = new Image(getClass().getResourceAsStream("/com/zamora/img/car.png"));
+            Image icon = new Image(getClass().getResourceAsStream("/img/car.png"));
             ventanaStage.getIcons().add(icon);
 
             
@@ -1337,7 +1337,7 @@ public class Clientes_CON
     {
     	try
     	{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/TipoDocumento_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/TipoDocumento_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == TipoDocumento_CON.class) {
@@ -1353,7 +1353,7 @@ public class Clientes_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Tipo Documento");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -1376,7 +1376,7 @@ public class Clientes_CON
 			
 			if(seleccionado != null)
 			{
-				FXMLLoader loaderDocumento = new FXMLLoader(getClass().getResource("/com/zamora/vistas/Documentos_PAN.fxml"));
+				FXMLLoader loaderDocumento = new FXMLLoader(getClass().getResource("/vistas/Documentos_PAN.fxml"));
                 
 				loaderDocumento.setControllerFactory(controllerClass -> {
 	                if (controllerClass == Documentos_CON.class) {
@@ -1395,9 +1395,9 @@ public class Clientes_CON
 	            
 	            Image iconDocumento = null;
 	            if(seleccionado.getTipo().equals("F"))
-	            	iconDocumento = new Image(getClass().getResourceAsStream("/com/zamora/img/factura.png"));
+	            	iconDocumento = new Image(getClass().getResourceAsStream("/img/factura.png"));
 	            else
-	            	iconDocumento = new Image(getClass().getResourceAsStream("/com/zamora/img/presupuesto.png"));
+	            	iconDocumento = new Image(getClass().getResourceAsStream("/img/presupuesto.png"));
 	            presupuesto.getIcons().add(iconDocumento);
 	            
 				// Configura la ventana secundaria como modal
@@ -1490,23 +1490,23 @@ public class Clientes_CON
     	{
     		tooltip.setText(sNotaImportante);
         	Tooltip.install(imgImportante, tooltip);
-    		imageNotaImportante = new Image(Main.class.getResource("img/rojo.png").toExternalForm());
+    		imageNotaImportante = new Image(Main.class.getResource("/img/rojo.png").toExternalForm());
     	}
     	else
     	{
         	Tooltip.uninstall(imgImportante, tooltip);
-    		imageNotaImportante = new Image(Main.class.getResource("img/verde.png").toExternalForm());
+    		imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
     	}
     	
 
     	Image imageDeuda;
     	if(tieneDeuda)
     	{
-    		imageDeuda = new Image(Main.class.getResource("img/freeikon-43.png").toExternalForm());
+    		imageDeuda = new Image(Main.class.getResource("/img/freeikon-43.png").toExternalForm());
     	}
     	else
     	{
-    		imageDeuda = new Image(Main.class.getResource("img/freeikon-44.png").toExternalForm());
+    		imageDeuda = new Image(Main.class.getResource("/img/freeikon-44.png").toExternalForm());
     	}
     	
     	deuda.setImage(imageDeuda);
@@ -1546,7 +1546,7 @@ public class Clientes_CON
 			db.conectar();
 			double deudaCantidad = cli.recuperarDeudaCliente(db, log, cli.getID_CLIENTE());
 			db.desconectar();
-	    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/PedirDato_PAN.fxml"));
+	    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/PedirDato_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
 	            if (controllerClass == PedirDato_CON.class) {
@@ -1562,7 +1562,7 @@ public class Clientes_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Cantidad de la deuda.");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -1596,11 +1596,11 @@ public class Clientes_CON
 				Image imageDeuda;
 		    	if(aux > 0)
 		    	{
-		    		imageDeuda = new Image(Main.class.getResource("img/freeikon-43.png").toExternalForm());
+		    		imageDeuda = new Image(Main.class.getResource("/img/freeikon-43.png").toExternalForm());
 		    	}
 		    	else
 		    	{
-		    		imageDeuda = new Image(Main.class.getResource("img/freeikon-44.png").toExternalForm());
+		    		imageDeuda = new Image(Main.class.getResource("/img/freeikon-44.png").toExternalForm());
 		    	}
 		    	
 		    	deuda.setImage(imageDeuda);

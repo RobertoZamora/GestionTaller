@@ -387,7 +387,7 @@ public class Vehiculos_CON
 		{
     		try
     		{
-    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
     	            if (controllerClass == Password_CON.class) {
@@ -403,7 +403,7 @@ public class Vehiculos_CON
     			Stage seleccionable = new Stage();
     			seleccionable.setTitle("Contraseña");
 
-    			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     			seleccionable.getIcons().add(icon);
 
     			seleccionable.setScene(new Scene(root));
@@ -503,7 +503,7 @@ public class Vehiculos_CON
     		
     		if(!NO_VEHICULO.equals(listaVehiculos.getSelectionModel().getSelectedItem().getMATRICULA()))
     		{
-    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Albaranes_PAN.fxml"));
+    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Albaranes_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
                     if (controllerClass == Albaranes_CON.class) {
@@ -521,7 +521,7 @@ public class Vehiculos_CON
     			vehiculos.setTitle("Albaranes");
     			vehiculos.setScene(new Scene(root, 920, 615));
 
-    			Image icon = new Image(Main.class.getResource("img/albaran.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/albaran.png").toExternalForm());
     			vehiculos.getIcons().add(icon);
     			
 
@@ -933,7 +933,7 @@ public class Vehiculos_CON
     	if(!NO_VEHICULO.equals(listaVehiculos.getSelectionModel().getSelectedItem().getMATRICULA()))
 		{
     		try {
-    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
     	            if (controllerClass == Password_CON.class) {
@@ -949,7 +949,7 @@ public class Vehiculos_CON
     			Stage seleccionable = new Stage();
     			seleccionable.setTitle("Contraseña");
 
-    			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     			seleccionable.getIcons().add(icon);
 
     			seleccionable.setScene(new Scene(root));
@@ -978,7 +978,7 @@ public class Vehiculos_CON
     	    	{
     	    		if(pass.equals(aux))
         	    	{
-    	    			FXMLLoader loaderBusqueda = new FXMLLoader(Main.class.getResource("vistas/BusquedaClientes_PAN.fxml"));
+    	    			FXMLLoader loaderBusqueda = new FXMLLoader(Main.class.getResource("/vistas/BusquedaClientes_PAN.fxml"));
     	    			
     	    			loaderBusqueda.setControllerFactory(controllerClass -> {
     	                    if (controllerClass == BusquedaClientes_CON.class) {
@@ -994,7 +994,7 @@ public class Vehiculos_CON
     	    			Stage seleccionableBusqueda = new Stage();
     	    			seleccionableBusqueda.setTitle("Buscar Cliente");
 
-    	    			Image iconBusqueda = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    	    			Image iconBusqueda = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     	    			seleccionableBusqueda.getIcons().add(iconBusqueda);
 
     	    			seleccionableBusqueda.setScene(new Scene(rootBusqueda));

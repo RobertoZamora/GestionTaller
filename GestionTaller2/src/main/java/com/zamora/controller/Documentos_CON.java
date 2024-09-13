@@ -229,13 +229,13 @@ public class Documentos_CON
 		formato = new DecimalFormat("###,##0.00 €");
 		if("P".equals(tipoDoc))
 		{
-	        Image imageAddPresu = new Image(Main.class.getResource("img/presupuestoPlus.png").toExternalForm());
+	        Image imageAddPresu = new Image(Main.class.getResource("/img/presupuestoPlus.png").toExternalForm());
 	        imgAddDoc.setImage(imageAddPresu);
-	        Image imageEditDoc = new Image(Main.class.getResource("img/presupuestoEdit.png").toExternalForm());
+	        Image imageEditDoc = new Image(Main.class.getResource("/img/presupuestoEdit.png").toExternalForm());
 	        imgEditDoc.setImage(imageEditDoc);
-	        Image imageDelDoc = new Image(Main.class.getResource("img/presupuestoErase.png").toExternalForm());
+	        Image imageDelDoc = new Image(Main.class.getResource("/img/presupuestoErase.png").toExternalForm());
 	        imgDelDoc.setImage(imageDelDoc);
-	        Image imageFindDoc = new Image(Main.class.getResource("img/presupuestoSearch.png").toExternalForm());
+	        Image imageFindDoc = new Image(Main.class.getResource("/img/presupuestoSearch.png").toExternalForm());
 	        imgFindDoc.setImage(imageFindDoc);
 	        
 	        mosKmTotalPres.setText("Total Presupuesto");
@@ -471,7 +471,7 @@ public class Documentos_CON
     	cliente.setText("");
     	mosKmTotalPres.setSelected(false);
     	
-    	Image imageNotaImportante = new Image(Main.class.getResource("img/verde.png").toExternalForm());
+    	Image imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
     	notaImportante.setImage(imageNotaImportante);
     	
     	Tooltip tooltip = new Tooltip();
@@ -592,7 +592,7 @@ public class Documentos_CON
 		{
     		if(util.confirmar("Se va a proceder a borrar este documento ¿esta seguro?"))
     		{
-        		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+        		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
     	            if (controllerClass == Password_CON.class) {
@@ -608,7 +608,7 @@ public class Documentos_CON
     			Stage seleccionable = new Stage();
     			seleccionable.setTitle("Contraseña");
 
-    			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     			seleccionable.getIcons().add(icon);
 
     			seleccionable.setScene(new Scene(root));
@@ -722,7 +722,7 @@ public class Documentos_CON
     void buscarDocumento(MouseEvent event)
     {
     	try {
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/BusquedaDocumentos_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/BusquedaDocumentos_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == BusquedaDocumentos_CON.class) {
@@ -741,12 +741,12 @@ public class Documentos_CON
 			
 			if("F".equals(tipoDoc))
 			{
-				icon = new Image(Main.class.getResource("img/factura.png").toExternalForm());
+				icon = new Image(Main.class.getResource("/img/factura.png").toExternalForm());
 				seleccionable.setTitle("Buscar Factura");
 			}
 			else
 			{
-				icon = new Image(Main.class.getResource("img/presupuesto.png").toExternalForm());
+				icon = new Image(Main.class.getResource("/img/presupuesto.png").toExternalForm());
 				seleccionable.setTitle("Buscar Presupuesto");
 				
 			}
@@ -911,7 +911,7 @@ public class Documentos_CON
     void buscarVehiculo(MouseEvent event)
     {
     	try {
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/BusquedaVehiculo_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/BusquedaVehiculo_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == BusquedaVehiculo_CON.class) {
@@ -927,7 +927,7 @@ public class Documentos_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Buscar Vehiculo");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -980,12 +980,12 @@ public class Documentos_CON
 	        	{
 	        		tooltip.setText(sNotaImportante);
 	            	Tooltip.install(notaImportante, tooltip);
-	        		imageNotaImportante = new Image(Main.class.getResource("img/rojo.png").toExternalForm());
+	        		imageNotaImportante = new Image(Main.class.getResource("/img/rojo.png").toExternalForm());
 	        	}
 	        	else
 	        	{
 	            	Tooltip.uninstall(notaImportante, tooltip);
-	        		imageNotaImportante = new Image(Main.class.getResource("img/verde.png").toExternalForm());
+	        		imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
 	        	}
 	        	
 	        	notaImportante.setImage(imageNotaImportante);
@@ -1008,7 +1008,7 @@ public class Documentos_CON
     void buscarCliente(MouseEvent event)
     {
     	try {
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/BusquedaClientes_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/BusquedaClientes_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == BusquedaClientes_CON.class) {
@@ -1024,7 +1024,7 @@ public class Documentos_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Buscar Cliente");
 
-			Image icon = new Image(Main.class.getResource("img/cliente.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/cliente.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -1067,7 +1067,7 @@ public class Documentos_CON
 				{
 					cliente.setText(aux.getIDFISCAL());
 					
-					FXMLLoader loaderVehiculo = new FXMLLoader(Main.class.getResource("vistas/BusquedaVehiculo_PAN.fxml"));
+					FXMLLoader loaderVehiculo = new FXMLLoader(Main.class.getResource("/vistas/BusquedaVehiculo_PAN.fxml"));
 					
 					loaderVehiculo.setControllerFactory(controllerClass -> {
 		                if (controllerClass == BusquedaVehiculo_CON.class) {
@@ -1083,7 +1083,7 @@ public class Documentos_CON
 					Stage seleccionableVehiculo = new Stage();
 					seleccionableVehiculo.setTitle("Buscar Vehiculo");
 
-					Image iconVehiculo = new Image(Main.class.getResource("img/car.png").toExternalForm());
+					Image iconVehiculo = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 					seleccionableVehiculo.getIcons().add(iconVehiculo);
 
 					seleccionableVehiculo.setScene(new Scene(rootVehiculo));
@@ -1134,12 +1134,12 @@ public class Documentos_CON
 	        	{
 	        		tooltip.setText(sNotaImportante);
 	            	Tooltip.install(notaImportante, tooltip);
-	        		imageNotaImportante = new Image(Main.class.getResource("img/rojo.png").toExternalForm());
+	        		imageNotaImportante = new Image(Main.class.getResource("/img/rojo.png").toExternalForm());
 	        	}
 	        	else
 	        	{
 	            	Tooltip.uninstall(notaImportante, tooltip);
-	        		imageNotaImportante = new Image(Main.class.getResource("img/verde.png").toExternalForm());
+	        		imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
 	        	}
 	        	
 	        	notaImportante.setImage(imageNotaImportante);
@@ -1162,7 +1162,7 @@ public class Documentos_CON
     void generarFactPres(MouseEvent event)
     {
     	try {
-	    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/BusquedaDocumentos_PAN.fxml"));
+	    	FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/BusquedaDocumentos_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
 	            if (controllerClass == BusquedaDocumentos_CON.class) {
@@ -1177,7 +1177,7 @@ public class Documentos_CON
 			
 			Stage seleccionable = new Stage();
 	
-			Image icon = new Image(Main.class.getResource("img/presupuesto.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/presupuesto.png").toExternalForm());
 			seleccionable.setTitle("Buscar Presupuesto");
 			
 			seleccionable.getIcons().add(icon);
@@ -1264,7 +1264,7 @@ public class Documentos_CON
     void prodGen(MouseEvent event)
     {
     	try {
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Generico_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Generico_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Generico_CON.class) {
@@ -1280,7 +1280,7 @@ public class Documentos_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Producto Generico");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -1871,7 +1871,7 @@ public class Documentos_CON
         		sTooltip += sNotaImportante;
         		tooltip.setText(sTooltip);
             	Tooltip.install(notaImportante, tooltip);
-        		imageNotaImportante = new Image(Main.class.getResource("img/rojo.png").toExternalForm());
+        		imageNotaImportante = new Image(Main.class.getResource("/img/rojo.png").toExternalForm());
         	}
         	else
         	{
@@ -1879,11 +1879,11 @@ public class Documentos_CON
         		{
             		tooltip.setText(mensajeDeuda);
                 	Tooltip.install(notaImportante, tooltip);
-            		imageNotaImportante = new Image(Main.class.getResource("img/rojo.png").toExternalForm());
+            		imageNotaImportante = new Image(Main.class.getResource("/img/rojo.png").toExternalForm());
         		}
         		else
         		{
-            		imageNotaImportante = new Image(Main.class.getResource("img/verde.png").toExternalForm());
+            		imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
                 	Tooltip.uninstall(notaImportante, tooltip);
         		}
         	}
@@ -1908,7 +1908,7 @@ public class Documentos_CON
         	cliente.setText("");
         	mosKmTotalPres.setSelected(false);
         	
-        	Image imageNotaImportante = new Image(Main.class.getResource("img/verde.png").toExternalForm());
+        	Image imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
         	notaImportante.setImage(imageNotaImportante);
         	
         	Tooltip tooltip = new Tooltip();

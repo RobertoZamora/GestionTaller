@@ -100,8 +100,7 @@ public class Main extends Application {
 	// Método para mostrar la ventana principal
 	private void mostrarVentanaPrincipal(Stage primaryStage) {
 	    try {
-	    	FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("vistas/Principal_PAN.fxml"));
+	    	FXMLLoader loader =  new FXMLLoader(getClass().getResource("/vistas/Principal_PAN.fxml"));
 			Pane ventana = (Pane) loader.load();
 
 			Principal_CON principal = loader.getController();
@@ -111,7 +110,7 @@ public class Main extends Application {
 			
 			primaryStage.setTitle("Gestion Taller");
 
-			Image icon = new Image(Main.class.getResourceAsStream("img/car.png"));
+			Image icon = new Image(Main.class.getResourceAsStream("/img/car.png"));
 			primaryStage.getIcons().add(icon);
 
 			primaryStage.setScene(scene);

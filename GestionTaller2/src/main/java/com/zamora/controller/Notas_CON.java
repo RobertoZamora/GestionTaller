@@ -144,7 +144,7 @@ public class Notas_CON
     	{
     		try
     		{
-    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
     	            if (controllerClass == Password_CON.class) {
@@ -160,7 +160,7 @@ public class Notas_CON
     			Stage seleccionable = new Stage();
     			seleccionable.setTitle("Contraseña");
 
-    			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     			seleccionable.getIcons().add(icon);
 
     			seleccionable.setScene(new Scene(root));
@@ -238,7 +238,7 @@ public class Notas_CON
         	conexion.conectar();
     		if(insertar)
         	{
-        		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/PedirDato_PAN.fxml"));
+        		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/PedirDato_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
     	            if (controllerClass == PedirDato_CON.class) {
@@ -254,7 +254,7 @@ public class Notas_CON
     			Stage seleccionable = new Stage();
     			seleccionable.setTitle("Nombre de la nota.");
 
-    			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     			seleccionable.getIcons().add(icon);
 
     			seleccionable.setScene(new Scene(root));

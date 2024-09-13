@@ -126,7 +126,7 @@ public class Albaranes_CON
     	}
     	else
     	{
-    		imagen = new Image(getClass().getResourceAsStream("/com/zamora/img/fondoAlbaran.png"));
+    		imagen = new Image(getClass().getResourceAsStream("/img/fondoAlbaran.png"));
             scrollZoom.setDisable(true);
     	}
         
@@ -312,7 +312,7 @@ public class Albaranes_CON
 		{
     		if(!NO_ALBARAN.equals(listaAlbaranes.getSelectionModel().getSelectedItem().getRUTA()))
         	{
-    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+    			FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
     			
     			loader.setControllerFactory(controllerClass -> {
     	            if (controllerClass == Password_CON.class) {
@@ -328,7 +328,7 @@ public class Albaranes_CON
     			Stage seleccionable = new Stage();
     			seleccionable.setTitle("Contraseña");
 
-    			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     			seleccionable.getIcons().add(icon);
 
     			seleccionable.setScene(new Scene(root));
@@ -376,7 +376,7 @@ public class Albaranes_CON
     		        	}
     		        	else
     		        	{
-    		        		imagen = new Image(getClass().getResourceAsStream("/com/zamora/img/fondoAlbaran.png"));
+    		        		imagen = new Image(getClass().getResourceAsStream("/img/fondoAlbaran.png"));
     		                scrollZoom.setDisable(true);
     		        	}
     		        	

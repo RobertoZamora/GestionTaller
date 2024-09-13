@@ -95,7 +95,7 @@ public class Configuracion_CON {
     {
     	try
 		{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/PedirDato_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/PedirDato_PAN.fxml"));
     		
     		loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == PedirDato_CON.class) {
@@ -111,7 +111,7 @@ public class Configuracion_CON {
     		Stage seleccionable = new Stage();
     		seleccionable.setTitle("Nombre de la Marca");
 
-    		Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    		Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     		seleccionable.getIcons().add(icon);
 
     		seleccionable.setScene(new Scene(root));
@@ -131,7 +131,7 @@ public class Configuracion_CON {
     		seleccionable.showAndWait(); // Muestra la ventana y espera hasta que se cierre
     		String aux = (String) ((PedirDato_CON)loader.getController()).getDato();
     		
-			if(!"".equals(aux))
+			if(!"".equals(aux) && aux != null)
 			{
 				ConexionBBDD db = new ConexionBBDD(log);
 				db.conectar();
@@ -168,7 +168,7 @@ public class Configuracion_CON {
     {
     	try
 		{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Modelo_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Modelo_PAN.fxml"));
     		
     		loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == Modelo_CON.class) {
@@ -184,7 +184,7 @@ public class Configuracion_CON {
     		Stage seleccionable = new Stage();
     		seleccionable.setTitle("Modelo");
 
-    		Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    		Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     		seleccionable.getIcons().add(icon);
 
     		seleccionable.setScene(new Scene(root));
@@ -510,7 +510,7 @@ public class Configuracion_CON {
     {
     	try
 		{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/Password_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/Password_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
 	            if (controllerClass == Password_CON.class) {
@@ -526,7 +526,7 @@ public class Configuracion_CON {
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Contraseña");
 
-			Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -555,7 +555,7 @@ public class Configuracion_CON {
 	    	
 	    	if(!"".equals(aux) && pass.equals(aux))
 	    	{
-	    		FXMLLoader loaderParametros = new FXMLLoader(Main.class.getResource("vistas/Parametros_PAN.fxml"));
+	    		FXMLLoader loaderParametros = new FXMLLoader(Main.class.getResource("/vistas/Parametros_PAN.fxml"));
 	    		
 	    		loaderParametros.setControllerFactory(controllerClass -> {
 	                if (controllerClass == Parametros_CON.class) {
@@ -571,7 +571,7 @@ public class Configuracion_CON {
 	    		Stage seleccionableParametros = new Stage();
 	    		seleccionableParametros.setTitle("Parametrizaciones");
 
-	    		Image iconParametros = new Image(Main.class.getResource("img/engranage.png").toExternalForm());
+	    		Image iconParametros = new Image(Main.class.getResource("/img/engranage.png").toExternalForm());
 	    		seleccionableParametros.getIcons().add(iconParametros);
 
 	    		seleccionableParametros.setScene(new Scene(rootParametros));

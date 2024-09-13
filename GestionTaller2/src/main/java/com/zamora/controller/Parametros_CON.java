@@ -103,14 +103,14 @@ public class Parametros_CON {
     {
     	try
 		{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/PasswordChange_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/PasswordChange_PAN.fxml"));
     		
     		Parent root = loader.load();
     		
     		Stage seleccionable = new Stage();
     		seleccionable.setTitle("Modelo");
 
-    		Image icon = new Image(Main.class.getResource("img/car.png").toExternalForm());
+    		Image icon = new Image(Main.class.getResource("/img/car.png").toExternalForm());
     		seleccionable.getIcons().add(icon);
 
     		seleccionable.setScene(new Scene(root));

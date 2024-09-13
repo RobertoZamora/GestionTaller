@@ -44,7 +44,7 @@ public class TipoDocumento_CON
 
     	try
     	{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/DocumentosCliente_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/DocumentosCliente_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == DocumentosCliente_CON.class) {
@@ -60,7 +60,7 @@ public class TipoDocumento_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Facturas");
 
-			Image icon = new Image(Main.class.getResource("img/factura.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/factura.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
@@ -93,7 +93,7 @@ public class TipoDocumento_CON
     {
     	try
     	{
-    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("vistas/DocumentosCliente_PAN.fxml"));
+    		FXMLLoader loader = new FXMLLoader(Main.class.getResource("/vistas/DocumentosCliente_PAN.fxml"));
 			
 			loader.setControllerFactory(controllerClass -> {
                 if (controllerClass == DocumentosCliente_CON.class) {
@@ -109,7 +109,7 @@ public class TipoDocumento_CON
 			Stage seleccionable = new Stage();
 			seleccionable.setTitle("Presupuestos");
 
-			Image icon = new Image(Main.class.getResource("img/presupuesto.png").toExternalForm());
+			Image icon = new Image(Main.class.getResource("/img/presupuesto.png").toExternalForm());
 			seleccionable.getIcons().add(icon);
 
 			seleccionable.setScene(new Scene(root));
