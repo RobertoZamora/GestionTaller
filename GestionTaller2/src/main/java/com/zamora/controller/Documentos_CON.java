@@ -5,6 +5,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -257,6 +258,13 @@ public class Documentos_CON
 		ArrayList<String> ALFormasPago = new ArrayList<String>();
 		ALFormasPago.add("Seleccione");
 		ALFormasPago.addAll(Arrays.asList(sFormasPago.split(";")));
+		
+		if (ALFormasPago.contains("###PRESUPUESTO###"))
+		{
+			ALFormasPago.remove("###PRESUPUESTO###");
+			formaDePago.setVisible(true);
+		}
+		
 		formaDePago.getItems().addAll(ALFormasPago);  
 		
 		idEmpresa = new Empresa_BEAN().recuperarDatosEmpresaPredefinida(db, log).getIdEmpresa();
@@ -303,11 +311,6 @@ public class Documentos_CON
 				{
 					if(e.getKeyCode() == KeyEvent.VK_TAB)
 					{
-						if((swingTable.getColumnCount() - 1) == swingTable.getSelectedColumn())
-						{
-							modeloTabla.addRow(new Object[] {"", "", null, null, null, null});
-							swingTable.changeSelection(swingTable.getSelectedRow() + 1, 0, false, false);
-						}
 						
 						double total = 0.0;
 						for(int i = 0; i < swingTable.getRowCount(); i++)
@@ -315,9 +318,9 @@ public class Documentos_CON
 							if(tipoDoc.equals("F"))
 							{
 								swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
-								double cantidad = (Double) (swingTable.getValueAt(i, 2) != null?swingTable.getValueAt(i, 2):0.0);
-								double precio = (Double) (swingTable.getValueAt(i, 3) != null?swingTable.getValueAt(i, 3):0.0);
-								int descuento = (Integer) (swingTable.getValueAt(i, 4) != null?swingTable.getValueAt(i, 4):0);
+								double cantidad = swingTable.getValueAt(i, 2) != null?Double.parseDouble(swingTable.getValueAt(i, 2).toString()):0.0;
+								double precio = swingTable.getValueAt(i, 3) != null?Double.parseDouble(swingTable.getValueAt(i, 3).toString()):0.0;
+								int descuento = swingTable.getValueAt(i, 4) != null?Integer.parseInt(swingTable.getValueAt(i, 4).toString()):0;
 								
 								double precioTotal = precio * cantidad;
 								double descontar = (precioTotal * descuento) / 100;
@@ -328,8 +331,8 @@ public class Documentos_CON
 							else
 							{
 								swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
-								double cantidad = (Double) (swingTable.getValueAt(i, 1) != null?swingTable.getValueAt(i, 1):0.0);
-								double precio = (Double) (swingTable.getValueAt(i, 2) != null?swingTable.getValueAt(i, 2):0.0);
+								double cantidad = swingTable.getValueAt(i, 1) != null && !"".equals(swingTable.getValueAt(i, 1))?Double.parseDouble(swingTable.getValueAt(i, 1).toString()):0.0;
+								double precio = swingTable.getValueAt(i, 2) != null && !"".equals(swingTable.getValueAt(i, 2))?Double.parseDouble(swingTable.getValueAt(i, 2).toString()):0.0;
 																
 								double precioTotal = precio * cantidad;
 								total += precioTotal;
@@ -338,6 +341,24 @@ public class Documentos_CON
 						}
 						total = total + (total * Integer.parseInt(impuesto != null && !impuesto.getText().trim().equals("")?impuesto.getText():"0") / 100);
 						textTotal.setText(formato.format(total));
+						
+						if(tipoDoc.equals("F"))
+						{
+							if((swingTable.getColumnCount() - 1) == swingTable.getSelectedColumn())
+							{
+								modeloTabla.addRow(new Object[] {"", "", null, null, null, null});
+								swingTable.changeSelection(swingTable.getSelectedRow() + 1, 0, false, false);
+							}
+						}
+						else
+						{
+							if((swingTable.getColumnCount() - 1) == swingTable.getSelectedColumn())
+							{
+								modeloTabla.addRow(new Object[] {"", null, null});
+								swingTable.changeSelection(swingTable.getSelectedRow() + 1, 0, false, false);
+							}
+							
+						}
 					}					
 				}
 			}
@@ -469,6 +490,7 @@ public class Documentos_CON
     	matricula.setText("");
     	marcaModelo.setText("");
     	cliente.setText("");
+    	kilometros.setText("");
     	mosKmTotalPres.setSelected(false);
     	
     	Image imageNotaImportante = new Image(Main.class.getResource("/img/verde.png").toExternalForm());
@@ -814,8 +836,15 @@ public class Documentos_CON
 			DirectoryChooser directoryChooser = new DirectoryChooser();
 	        directoryChooser.setTitle("Selecciona una carpeta");
 	        
+	        File documentsDir = Paths.get(System.getProperty("user.home"), "Documents").toFile();
+	        File fallbackDir = new File(System.getProperty("user.home"));
+	        
 	        // Establece el directorio inicial en la carpeta home del usuario
-	        directoryChooser.setInitialDirectory(new java.io.File(System.getProperty("user.home")));   
+	        if (documentsDir.exists() && documentsDir.isDirectory()) {
+	            directoryChooser.setInitialDirectory(documentsDir);
+	        } else {
+	            directoryChooser.setInitialDirectory(fallbackDir);
+	        }   
 
 	        // Abre el diálogo de selección de carpeta
 	        File selectedDirectory = directoryChooser.showDialog(((Stage) pdf.getScene().getWindow()));
