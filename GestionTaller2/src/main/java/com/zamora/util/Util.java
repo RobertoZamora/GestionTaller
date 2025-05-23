@@ -638,7 +638,7 @@ public class Util {
 					    	values += ", ";
 					    if(campo[1].startsWith("VARCHAR"))
 					    {
-					    	values += (rs3.getString(campo[0]) != null || rs3.getString(campo[0]).trim().length() != 0 )?"'" + rs3.getString(campo[0]).trim().replaceAll("'", "''").replace("\n", " ") + "'":"null";
+					    	values += (rs3.getString(campo[0]) != null && rs3.getString(campo[0]).trim().length() != 0 )?"'" + rs3.getString(campo[0]).trim().replaceAll("'", "''").replace("\n", " ") + "'":"null";
 					    }
 					    else if(campo[1].startsWith("INTEGER") || campo[1].startsWith("SMALLINT") || campo[1].startsWith("BOOLEAN") || campo[1].startsWith("DOUBLE"))
 					    {
@@ -652,7 +652,7 @@ public class Util {
 			long fin = System.currentTimeMillis();
 			log.log(Level.DEBUG, "Tiempo en extraccion del backup tardo: " + (double) (fin - inicio) / 1000 + " segundos." );
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			log.log(Level.ERROR, e.getMessage());	
 			log.log(Level.ERROR, e);
 		}

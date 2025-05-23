@@ -1572,7 +1572,7 @@ public class Documentos_CON
 			doc.setFecha(DateTimeFormatter.ofPattern("dd/MM/yyyy").format(fecha.getValue()));
 			doc.setKilometraje(Integer.parseInt(kilometros.getText()));
 			doc.setTotalPresupuesto(mosKmTotalPres.isSelected());
-			if(!tipoDoc.equals("P"))
+			if(formaDePago.isVisible())
 				doc.setFormaPago(String.valueOf(formaDePago.getValue()));
 			
 			ArrayList<CargoDocumento_BEAN> cargos = new ArrayList<CargoDocumento_BEAN>();
@@ -1586,7 +1586,7 @@ public class Documentos_CON
 				
 				if(tipoDoc.equals("F"))
 				{
-					cargo.setReferencia(String.valueOf(swingTable.getModel().getValueAt(i, 0)).toUpperCase());
+					cargo.setReferencia(swingTable.getModel().getValueAt(i, 0) != null?String.valueOf(swingTable.getModel().getValueAt(i, 0)).toUpperCase():"");
 					cargo.setDescripcion(String.valueOf(swingTable.getModel().getValueAt(i, 1)).toUpperCase());
 					cargo.setUnidades(swingTable.getModel().getValueAt(i, 2) != null?Double.parseDouble(String.valueOf(swingTable.getModel().getValueAt(i, 2))):0.0);
 					cargo.setPrecio(swingTable.getModel().getValueAt(i, 3) != null?Double.parseDouble(String.valueOf(swingTable.getModel().getValueAt(i, 3))):0.0);
