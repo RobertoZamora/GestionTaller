@@ -612,7 +612,7 @@ public class Clientes_CON
 			error +=  "\nEl piso no puede exceder de 10 caracteres.";
 		}
 		
-		if(letra.getText().length() > 10)
+		if(letra.getText() != null && letra.getText().length() > 10)
 		{
 			correcto = false;
 			error +=  "\nLa letra no puede exceder de 10 caracteres.";
@@ -636,22 +636,24 @@ public class Clientes_CON
 				error +=  "\nEl movil no puede exceder de 9 digitos.";
 		}
 		
-		if(mail.getText().length() > 200)
-		{
-			correcto = false;
-			error +=  "\nLa direccion no puede exceder de 200 caracteres.";
-		}
-		else if(mail.getText().length() > 0 && mail.getText().length() <= 200)
-		{
-			Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-			String email = mail.getText();
-			
-			Matcher mather = pattern.matcher(email);
-			 
-	        if (!mather.find()) {
-	        	correcto = false;
-				error +=  "\nEl email no es correcto.";
-	        }
+		if(mail.getText() != null) {
+			if(mail.getText().length() > 200)
+			{
+				correcto = false;
+				error +=  "\nLa direccion no puede exceder de 200 caracteres.";
+			}
+			else if(mail.getText().length() > 0 && mail.getText().length() <= 200)
+			{
+				Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+				String email = mail.getText();
+				
+				Matcher mather = pattern.matcher(email);
+				 
+		        if (!mather.find()) {
+		        	correcto = false;
+					error +=  "\nEl email no es correcto.";
+		        }
+			}
 		}
 		
 		if(correcto)

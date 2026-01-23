@@ -1470,6 +1470,39 @@ public class Documentos_CON
     @FXML
     void aceptar(MouseEvent event)
     {
+    	
+    	if(swingTable.isEnabled())
+		{
+			double total = 0.0;
+			for(int i = 0; i < swingTable.getRowCount(); i++)
+			{
+				if(tipoDoc.equals("F"))
+				{
+					swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
+					double cantidad = swingTable.getValueAt(i, 2) != null?Double.parseDouble(swingTable.getValueAt(i, 2).toString()):0.0;
+					double precio = swingTable.getValueAt(i, 3) != null?Double.parseDouble(swingTable.getValueAt(i, 3).toString()):0.0;
+					int descuento = swingTable.getValueAt(i, 4) != null?Integer.parseInt(swingTable.getValueAt(i, 4).toString()):0;
+					
+					double precioTotal = precio * cantidad;
+					double descontar = (precioTotal * descuento) / 100;
+					double totalProducto = precioTotal - descontar;
+					total += totalProducto;
+					swingTable.setValueAt(Math.round(totalProducto * 100.0) / 100.0, i, 5);
+				}
+				else
+				{
+					swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
+					double cantidad = swingTable.getValueAt(i, 1) != null && !"".equals(swingTable.getValueAt(i, 1))?Double.parseDouble(swingTable.getValueAt(i, 1).toString()):0.0;
+					double precio = swingTable.getValueAt(i, 2) != null && !"".equals(swingTable.getValueAt(i, 2))?Double.parseDouble(swingTable.getValueAt(i, 2).toString()):0.0;
+													
+					double precioTotal = precio * cantidad;
+					total += precioTotal;
+					swingTable.setValueAt(Math.round(precioTotal*100.0)/100.0, i, 3);
+				}
+			}
+			total = total + (total * Integer.parseInt(impuesto != null && !impuesto.getText().trim().equals("")?impuesto.getText():"0") / 100);
+			textTotal.setText(formato.format(total));				
+		}
 
 		boolean correcto = true;
 		String error = "";

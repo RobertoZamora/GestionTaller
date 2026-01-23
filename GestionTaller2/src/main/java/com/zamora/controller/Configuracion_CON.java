@@ -361,8 +361,9 @@ public class Configuracion_CON {
 						        try {
 
 									File fichero = new File(selectedDirectory.getAbsolutePath() + File.separator + files[i]);
-						            fr = new FileReader (fichero);
-						            br = new BufferedReader(fr);
+									FileInputStream fis = new FileInputStream(fichero);
+									InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
+									br = new BufferedReader(isr);
 						            
 						            String linea;
 					            	

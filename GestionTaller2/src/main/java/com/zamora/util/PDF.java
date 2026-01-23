@@ -496,7 +496,7 @@ public class PDF {
     	hueco91.setBorder(PdfPCell.NO_BORDER);  
     	datos2.addCell(hueco91);
 
-    	PdfPCell direccionCliente1 =  new PdfPCell(new Phrase(cliente.getDIRECCION() + " " + cliente.getPORTAL() + " " + ((cliente.getPISO() == null)?"":cliente.getPISO()) + " " + cliente.getLETRA(), paragraphFont));
+    	PdfPCell direccionCliente1 =  new PdfPCell(new Phrase(cliente.getDIRECCION() + " " + cliente.getPORTAL() + " " + ((cliente.getPISO() == null)?"":cliente.getPISO()) + " " + ((cliente.getLETRA() == null)?"":cliente.getLETRA()), paragraphFont));
     	direccionCliente1.setHorizontalAlignment(Element.ALIGN_LEFT);
     	direccionCliente1.setBorder(PdfPCell.RIGHT | PdfPCell.LEFT);  
     	datos2.addCell(direccionCliente1);
