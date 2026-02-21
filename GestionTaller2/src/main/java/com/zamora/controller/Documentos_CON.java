@@ -317,7 +317,8 @@ public class Documentos_CON
 						{
 							if(tipoDoc.equals("F"))
 							{
-								swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
+
+								swingTable.setValueAt(swingTable.getValueAt(i, 0) != null ? swingTable.getValueAt(i, 0).toString().toUpperCase() : "", i, 0);
 								double cantidad = swingTable.getValueAt(i, 2) != null?Double.parseDouble(swingTable.getValueAt(i, 2).toString()):0.0;
 								double precio = swingTable.getValueAt(i, 3) != null?Double.parseDouble(swingTable.getValueAt(i, 3).toString()):0.0;
 								int descuento = swingTable.getValueAt(i, 4) != null?Integer.parseInt(swingTable.getValueAt(i, 4).toString()):0;
@@ -1384,7 +1385,7 @@ public class Documentos_CON
 				{
 					if(tipoDoc.equals("F"))
 					{
-						swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
+						swingTable.setValueAt(swingTable.getValueAt(i, 0) != null ? swingTable.getValueAt(i, 0).toString().toUpperCase() : "", i, 0);
 						double cantidad = (Double) (swingTable.getValueAt(i, 2) != null?swingTable.getValueAt(i, 2):0.0);
 						double precio = (Double) (swingTable.getValueAt(i, 3) != null?swingTable.getValueAt(i, 3):0.0);
 						int descuento = (Integer) (swingTable.getValueAt(i, 4) != null?swingTable.getValueAt(i, 4):0);
@@ -1478,7 +1479,7 @@ public class Documentos_CON
 			{
 				if(tipoDoc.equals("F"))
 				{
-					swingTable.setValueAt(swingTable.getValueAt(i, 0).toString().toUpperCase(), i, 0);
+					swingTable.setValueAt(swingTable.getValueAt(i, 0) != null ? swingTable.getValueAt(i, 0).toString().toUpperCase() : "", i, 0);
 					double cantidad = swingTable.getValueAt(i, 2) != null?Double.parseDouble(swingTable.getValueAt(i, 2).toString()):0.0;
 					double precio = swingTable.getValueAt(i, 3) != null?Double.parseDouble(swingTable.getValueAt(i, 3).toString()):0.0;
 					int descuento = swingTable.getValueAt(i, 4) != null?Integer.parseInt(swingTable.getValueAt(i, 4).toString()):0;
